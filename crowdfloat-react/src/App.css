@@ -1,0 +1,87 @@
+/* ─── Main Content Area ──────────────────────────── */
+.main-content {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 100px 20px 80px;
+  position: relative;
+  width: 100%;
+}
+
+.hero-transition-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  display: flex; justify-content: center;
+  min-height: 480px;
+}
+
+/* Sections overlaying each other */
+.hero-section, .roles-section {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  width: 100%;
+  transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.4, 1), visibility 0.6s;
+}
+
+/* Default States */
+.hero-section { opacity: 1; transform: translateY(0) scale(1); visibility: visible; }
+.roles-section { position: absolute; top: 0; left: 0; opacity: 0; transform: translateY(40px) scale(0.97); visibility: hidden; }
+
+/* When displaying roles, slide out hero and fade in roles */
+.showing-roles .hero-section {
+  position: absolute; top: 0; left: 0;
+  opacity: 0; transform: translateY(-40px) scale(0.97); visibility: hidden;
+}
+.showing-roles .roles-section {
+  position: relative;
+  opacity: 1; transform: translateY(0) scale(1); visibility: visible;
+}
+
+.main-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--ink-500);
+  margin-bottom: 24px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.main-eyebrow::before, .main-eyebrow::after {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--ink-200);
+}
+
+.main-heading {
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 800; line-height: 1.05; letter-spacing: -2px;
+  color: var(--ink-900); margin-bottom: 24px;
+  max-width: 860px;
+}
+
+.main-sub {
+  font-size: 18px; color: var(--text-secondary); font-weight: 400;
+  margin-bottom: 48px; max-width: 640px; line-height: 1.6;
+}
+
+/* ─── Get Started Button ──────────────────────────── */
+.btn-get-started {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--ink-900);
+  color: #fff;
+  border: 1px solid var(--ink-900);
+  padding: 16px 36px;
+  border-radius: 40px;
+  font-size: 16px; font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(139, 130, 115, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+}
+.btn-get-started svg { width: 18px; height: 18px; transition: transform var(--transition); }
+.btn-get-started:hover {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(104, 147, 227, 0.25);
+}
+.btn-get-started:active { transform: translateY(0) scale(0.98); }
+.btn-get-started:hover svg { transform: translateX(5px); }
+
+/* Cleaned up unused styles */
+

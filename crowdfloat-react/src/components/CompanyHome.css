@@ -1,0 +1,414 @@
+.company-home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+}
+
+.company-home-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.company-home-header h1 {
+  font-size: 34px;
+  color: #0f766e;
+  margin-bottom: 6px;
+}
+
+.company-home-header p {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.submission-chip {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #e6fffb;
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-back-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.home-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.home-section h3 {
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.company-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.company-upload-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.company-upload-grid input,
+.company-upload-grid select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  padding: 9px 10px;
+}
+
+.file-info {
+  padding: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  margin: 10px 0;
+  color: #166534;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-inline-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0 8px;
+  flex-wrap: wrap;
+}
+
+.home-primary-btn {
+  border: none;
+  border-radius: 8px;
+  background: #0f766e;
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.home-primary-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.status-pill.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.pending {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.status-pill.dispute {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.company-table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.company-sync-title {
+  margin-top: 16px;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.company-linked-table {
+  width: 100%;
+  min-width: 880px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.company-linked-table th,
+.company-linked-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 13px;
+}
+
+.company-linked-table th {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.company-linked-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.company-empty-row {
+  text-align: center;
+  color: #64748b;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.offer-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.offer-card.accepted {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.15);
+}
+
+.offer-card h4 {
+  margin-bottom: 8px;
+}
+
+.offer-card p {
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.money-status {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.money-detail {
+  margin-top: 6px;
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .company-upload-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Secondary button ─────────────────────────────────────── */
+.home-secondary-btn {
+  border: 1.5px solid #0f766e;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f766e;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.home-secondary-btn:hover:not(:disabled) {
+  background: #f0fdfa;
+}
+
+.home-secondary-btn:disabled {
+  border-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ─── GST Result Panel ─────────────────────────────────────── */
+.gst-result-panel {
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  background: #f0fdf4;
+  padding: 14px 16px;
+  margin: 10px 0;
+}
+
+.gst-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.gst-result-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #064e3b;
+}
+
+.gst-dismiss-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.gst-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .gst-result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gst-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gst-field-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #6b7280;
+}
+
+.gst-field-value {
+  font-size: 13px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.gst-mono {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.gst-badges-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.gst-gstin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gst-gstin-badge.gst-ok {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.gst-gstin-badge.gst-fail {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.gst-company-name {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.gst-risk-badge,
+.gst-score-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: inherit;
+}
+
+.gst-warning-msg {
+  font-size: 12px;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-top: 6px;
+}
+
+.gst-flags-msg {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.gst-error-msg {
+  font-size: 13px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 8px;
+}
+
+/* ─── Mini GST badge (table cells) ────────────────────────── */
+.gst-mini-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.gst-mini-badge.gst-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.gst-mini-badge.gst-fail {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.gst-mini-badge.gst-na {
+  color: #9ca3af;
+}

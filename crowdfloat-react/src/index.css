@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+
+/* ─── Warm & Soft Fintech Tokens ──────────────────────────────── */
+:root {
+  /* Soft warm backgrounds */
+  --bg-base:       #fcfbfa; /* Very pale warm sand */
+  --bg-surface:    #ffffff;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #faf9f7;
+  
+  --border:        rgba(139, 130, 115, 0.12);
+  --border-active: rgba(121, 155, 203, 0.4);
+
+  /* Deep slate/warm charcoal instead of black */
+  --ink-900: #2d2e32;
+  --ink-800: #42444a;
+  --ink-700: #595c65;
+  --ink-500: #8a8d98;
+  --ink-400: #a7aab5;
+  --ink-200: #dcdfe5;
+  --ink-100: #edf0f5;
+  --ink-50:  #f5f7fa;
+
+  /* Accents: Soft Blue, Beige, Sandal */
+  --accent-blue:   #6893e3;
+  --accent-beige:  #dcc9a3;
+  --accent-sand:   #e8dcc4;
+  --accent-sage:   #9fb399;
+
+  --text-primary:   #2d2e32;
+  --text-secondary: #595c65;
+  --text-muted:     #8a8d98;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  --shadow-card:  0 4px 20px rgba(139, 130, 115, 0.05), 0 1px 3px rgba(139, 130, 115, 0.03);
+  --shadow-hover: 0 12px 30px rgba(139, 130, 115, 0.08), 0 4px 8px rgba(139, 130, 115, 0.04);
+  --shadow-nav:   0 1px 0 rgba(139, 130, 115, 0.08);
+
+  --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ─── Subtle grid dot background ─────────────────────────── */
+.bg-orbs {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(circle, rgba(139, 130, 115, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+/* Feathered edges so the grid fades out */
+.bg-orbs::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%,
+    transparent 20%,
+    var(--bg-base) 90%);
+}
+.orb { display: none; }
+
+/* ─── App Shell ─────────────────────────────────────────── */
+.app-shell {
+  position: relative; z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── Ripple ────────────────────────────────────────────── */
+.ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  transform: scale(0);
+  animation: ripple-anim 0.55s linear;
+  pointer-events: none;
+}
+@keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 4px; }
+* { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.08) transparent; }

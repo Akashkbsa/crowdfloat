@@ -1,0 +1,79 @@
+.navbar {
+  grid-column: 1 / -1;
+  display: flex; align-items: center;
+  padding: 0 28px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-nav);
+  gap: 12px;
+  position: relative; z-index: 10;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 32px; height: 32px;
+  background: var(--ink-900);
+  border-radius: 8px;
+  display: grid; place-items: center;
+  flex-shrink: 0; position: relative; overflow: hidden;
+}
+.logo-mark::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+}
+.logo-mark svg { width: 17px; height: 17px; color: #fff; position: relative; z-index: 1; }
+
+.logo-name {
+  font-size: 16px; font-weight: 800; letter-spacing: -0.4px;
+  color: var(--ink-900);
+}
+.logo-name span { color: var(--ink-500); }
+
+.nav-spacer { flex: 1; }
+
+.nav-badge {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-200);
+  border-radius: 20px;
+  padding: 4px 12px 4px 8px;
+  font-size: 12px; font-weight: 600; color: var(--ink-700);
+}
+.nav-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent-sage);
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.3; transform:scale(0.65); }
+}
+
+.nav-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  color: var(--text-secondary);
+  padding: 7px 14px; border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+.nav-btn svg { width: 15px; height: 15px; }
+.nav-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.nav-btn--danger:hover { background: #fff0f1; color: #c0392b; }
+
+.nav-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--accent-blue);
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 700; color: #fff;
+  cursor: pointer; border: 2px solid transparent;
+  transition: border-color var(--transition), transform var(--transition);
+  flex-shrink: 0;
+}
+.nav-avatar:hover { border-color: var(--ink-200); transform: scale(1.05); }
